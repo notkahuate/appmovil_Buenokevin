@@ -51,15 +51,19 @@
       margin-top: 1%;
   }
   
-  @media screen and (max-width: 500px){
+  @media only screen and (max-width: 767px){
       .search-bar input {
           padding: 10px;
           border: 1px solid #ddd;
           border-radius: 8px;
           flex: 1;
       }
+
+
+
   }
-  
+
+
   .icon-button {
       position: relative;
       display: flex;
@@ -107,98 +111,91 @@
       height: 40px;
   }
 
-  .slider {
-    position: relative;
-    width: 100vw; /* Ancho completo de la pantalla */
-    max-width: 600px; /* Anchura máxima ajustada */
-    height: 250px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-  }
-
-  .slider input {
-    visibility: hidden;
-    display: none;
-  }
-
-  .buttons {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 15px;
-    gap: 10px;
-  }
-
-  .buttons label {
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    opacity: 0.5;
-    cursor: pointer;
-    z-index: 1;
-    transition: 300ms ease-in-out;
-    border-radius: 50%;
-  }
-
-  .buttons label:hover {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-
-  .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-  .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-  .slider input:nth-child(3):checked ~ .buttons label:nth-child(3) {
-    opacity: 1;
-    width: 15px;
-  }
-
-  .content {
-    display: flex;
-    width: 300%;
-    transition: transform 400ms ease-in-out;
-  }
-
-  .content div {
-    min-width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .firstslide {
-    background-color: rgb(0, 123, 82);
-  }
-
-  .secondslide {
-    background-color: brown;
-  }
-
-  .thirdslide {
-    background-color: green;
-  }
-
-  .slider input:nth-child(1):checked ~ .content {
-    transform: translateX(0);
-  }
-
-  .slider input:nth-child(2):checked ~ .content {
-    transform: translateX(-100%);
-  }
-
-  .slider input:nth-child(3):checked ~ .content {
-    transform: translateX(-200%);
-  }
-
 .destinos{
     display: flex;
-    justify-content: center;
     margin: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  width: 60%;
+  
+
+  & > .carousel-item {
+    flex: 1;
+    /* flex-grow: 1; */
+    min-width: 40%;
+    background-color: purple;
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .carousel {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 100%;
+    overflow-x: scroll;
+  
+    & > .carousel-item {
+      flex: 1;
+      /* flex-grow: 1; */
+      min-width: 40%;
+      background-color: purple;
+      margin: 0 5px;
+    }
+  }
+
+}
+
+
+.carousel-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.carousel-item:nth-child(1) {
+  background-color: rgba(128, 0, 128, 0.1) 
+  ; 
+}
+
+.carousel-item:nth-child(2) {
+  background-color: rgba(255, 255, 0, 0.1) 
+  ; 
+}
+
+.carousel-item:nth-child(3) {
+  background-color: rgba(255, 0, 0, 0.1) ; 
+}
+
+.carousel-item:nth-child(4) {
+  background-color: rgba(0, 255, 0, 0.1) 
+  ; 
+}
+
+.carousel2 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  
+
+  & > .carousel-items2{
+    flex: 1;
+
+
+    background-color: purple;
+
+  }
 }
