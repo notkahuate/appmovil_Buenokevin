@@ -11,6 +11,7 @@
       flex-direction: column;
       background-color: #f8f9fa;
       padding: 20px;
+      margin-top: 5vh;
       
   
       
@@ -21,6 +22,7 @@
       flex-direction: column;
       height: 100%;
       width: 100%;
+
   
   }
   
@@ -36,28 +38,41 @@
   }
   
   .search-bar {
-      display: flex;
-      gap: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    padding-left: 35px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 50%;
+    background-image: url(../img/libro-abierto-con-lupa.png); 
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 20px; 
+
   }
-  
-  .search-bar input {
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 50%;
-  }
-  
-  input{
-      margin-top: 1%;
-  }
+
+input {
+    margin-top: 1%;
+}
+
   
   @media only screen and (max-width: 767px){
-      .search-bar input {
-          padding: 10px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          flex: 1;
-      }
+    .search-bar input {
+      padding: 10px;
+      padding-left: 35px; 
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      background-image: url(../img/libro-abierto-con-lupa.png); 
+      background-repeat: no-repeat;
+      background-position: 10px center; 
+      background-size: 20px; 
+  
+    }
 
 
 
@@ -181,7 +196,7 @@
 @media only screen and (max-width: 767px){
 
   .carousel2 {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     height: 50%;
@@ -191,7 +206,7 @@
   
     & > .carousel-items2{
       display: flex;
-      padding: 10px;
+      padding: 2px;
       border-radius: 20px;
   
     }
@@ -200,7 +215,9 @@
   .carousel-items2 img{
     border-radius: 10px;
     margin: 2%;
-    width:55vh;
+    width:50vh;
+    height:27vh;
+  
   }
 
 }
@@ -208,7 +225,7 @@
 @media only screen and (min-width: 767px){
 
   .carousel2 {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     height: 50%;
@@ -233,8 +250,8 @@
   
   .carousel-items2 img{
     border-radius: 10px;
-    margin: 2%;
-    width:65vh;
+    margin: 1%;
+    width:60vh;
     transition: transform 0.3s ease; 
   }
 
@@ -245,10 +262,134 @@
 }
 
 .text{
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   margin: 1%;
-  margin-top: 3%;
+  margin-top: 5%;
   font-style: normal;
+}
+
+
+@media only screen and (max-width: 767px){
+
+  .carousel3 a{
+    text-decoration: none;
+
+  }
+
+  .carousel3 {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  .carousel-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-item3 img {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .carousel-item3:hover {
+    transform: scale(1.05);
+  }
+  
+  .event-details {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .event-details h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: black;
+  }
+  
+  .event-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+  }
+  
+
+}
+
+@media only screen and (min-width: 767px){
+
+  .carousel3 a{
+    text-decoration: none;
+
+  }
+
+  .carousel3 {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  .carousel-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50vh;
+    min-width: 200px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-item3 img {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .carousel-item3:hover {
+    transform: scale(1.05);
+  }
+  
+  .event-details {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .event-details h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: black;
+  }
+  
+  .event-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+  }
+  
+  
+}
+
+.imagep{
+  display: flex;
+  gap: 3vh;
+
+}
+
+.imagep img{
+  width: 2vh;
+  
 }
