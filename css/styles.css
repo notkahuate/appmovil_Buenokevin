@@ -212,6 +212,15 @@ input {
     }
   }
 
+  .carousel-items2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2px;
+    border-radius: 10px;
+  }
+
   .carousel-items2 img{
     border-radius: 10px;
     margin: 2%;
@@ -239,7 +248,7 @@ input {
   
     }
   }
-  .carousel-item2 {
+  .carousel-items2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,3 +402,4 @@ input {
   width: 2vh;
   
 }
+
